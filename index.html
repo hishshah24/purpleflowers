@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Flowers | Dreamy Lilac Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="decor candy">🍬</div>
+    <div class="decor tulip-pink">🌷</div>
+    <div class="decor basket-iron">🧺</div>
+    <div class="decor cloud-soft">☁️</div>
+
+    <div id="login-overlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#f0eaff]">
+        <div class="bg-white p-12 rounded-[60px] shadow-2xl text-center border-4 border-purple-200 max-w-sm mx-4 relative">
+            <div class="text-5xl mb-4">✨</div>
+            <h2 class="font-fancy text-4xl text-purple-400 mb-2">Purple Flowers</h2>
+            <p class="text-gray-400 mb-8 text-sm">Masuk dengan Gmail untuk melihat lapak bunga impianmu.</p>
+            <button id="login-btn" class="btn-primary w-full py-4 rounded-full font-bold shadow-lg">
+                Login with Gmail
+            </button>
+        </div>
+    </div>
+
+    <nav id="navbar" class="hidden sticky top-0 z-50 px-8 py-4 flex justify-between items-center bg-white/60 backdrop-blur-lg border-b-2 border-purple-100">
+        <div class="logo text-3xl font-bold text-purple-500 font-fancy">Purple Flowers</div>
+        <div class="flex items-center gap-6">
+            <a href="#" onclick="showPage('home')" class="nav-link font-semibold text-purple-800">Lapak Utama</a>
+            <a href="#" onclick="showPage('katalog')" class="nav-link font-semibold text-purple-800">Koleksi Bunga</a>
+            <button id="logout-btn" class="bg-purple-100 text-purple-500 px-4 py-1 rounded-full text-xs font-bold hover:bg-red-100 hover:text-red-500 transition">LOGOUT</button>
+        </div>
+    </nav>
+
+    <section id="page-home" class="hidden page-content min-h-screen flex items-center justify-center p-6">
+        <div class="text-center bg-white/40 backdrop-blur-md p-10 rounded-[80px] border-2 border-white shadow-2xl max-w-4xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 p-4 opacity-20 text-6xl">✨</div>
+            <h1 class="text-7xl text-purple-600 mb-6 font-fancy">Lapak Bunga Kapas Ungu</h1>
+            <p class="text-xl text-gray-700 mb-10 leading-relaxed italic">"Menghadirkan keajaiban bunga segar dalam balutan warna lilac yang dingin dan manis."</p>
+            <button onclick="showPage('katalog')" class="btn-primary px-16 py-5 rounded-full text-xl shadow-2xl font-bold tracking-wide">Buka Keranjang Bunga 🧺</button>
+        </div>
+    </section>
+
+    <section id="page-katalog" class="hidden page-content container mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl text-purple-400 font-fancy mb-2">Pilihan Bunga Cantik</h2>
+            <div class="h-1 w-24 bg-purple-200 mx-auto rounded-full"></div>
+        </div>
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+            </div>
+    </section>
+
+    <div id="floating-cart" class="fixed bottom-10 right-10 flex items-center gap-4 translate-x-[200%] transition-all duration-700 z-50">
+        <div class="bg-blue-400 p-6 rounded-[40px] shadow-2xl border-4 border-blue-200 flex items-center gap-4 text-white">
+            <div class="text-4xl animate-bounce">🧺</div>
+            <div>
+                <p id="cart-count" class="font-bold text-lg">0 Pesanan</p>
+                <button id="checkout-btn" class="text-xs bg-white text-blue-500 px-5 py-2 rounded-full mt-2 font-black uppercase hover:bg-purple-50 transition shadow-inner">Check-Out DANA</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
